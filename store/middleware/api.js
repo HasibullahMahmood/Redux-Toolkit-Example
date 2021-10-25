@@ -6,7 +6,7 @@ const api = (store) => (next) => async (action) => {
 	const { dispatch } = store;
 	const { url, method, data, onStart, onSuccess, onError } = action.payload;
 	if (onStart) dispatch({ type: onStart });
-	next(action); // compulsory
+	next(action);
 	try {
 		const response = await axios.request({
 			baseURL: 'http://api.vihobook.com',
