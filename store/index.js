@@ -1,6 +1,6 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
-import locationsReducer from './locations';
-import projectsReducer from './projects';
+import locationsReducer from './slices/locations';
+import projectsReducer from './slices/projects';
 import api from './middleware/api';
 
 const reducer = combineReducers({
